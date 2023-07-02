@@ -9,17 +9,21 @@ Users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover and focus states for interactive elements
 
+### What I Learned
+
+I learned how to use media queries and art direction to make the image responsive. I also researched on the following topics: CSS reset, using EMs vs. REMs, and how to add icon SVGs.
+
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Link to live site: [HERE](https://sh0910.github.io/frontend-mentor-solutions/02-product-preview-card-component)
 
 ### Screenshot
 
-Desktop version
-![](./screenshot.png)
+Desktop screenshot
+![](./screenshot-desktop.png)
 
-Mobile version
-![](./screenshot.png)
+Mobile screenshot
+![](./screenshot-mobile.png)
 
 ### Built with
 

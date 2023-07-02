@@ -19,7 +19,6 @@
 }
 
 body {
-	background-image: url('/design/active-states.jpg');
 	background-color: var(--color-cream);
 	min-height: 100vh;
 	color: var(--color-dark-2);
@@ -53,17 +52,17 @@ img {
 
 .product {
 	max-width: 600px;
-	max-height: 450px;
+	/* max-height: 450px; */
 	background-color: var(--color-white);
 	border-radius: 10px;
 	overflow: hidden;
+
+	display: flex;
+	align-items: center;
 }
 
 .product > * {
 	flex: 0 0 50%;
-}
-
-.img-container {
 }
 
 .product__image {
@@ -129,4 +128,21 @@ img {
 	background-image: url('/images/icon-cart.svg');
 	width: 15px;
 	height: 16px;
+}
+
+@media (max-width: 650px) {
+	.product {
+		flex-direction: column;
+		max-width: 345px;
+		margin-block: 2em;
+	}
+
+	.info-container {
+		padding: 1.5rem;
+	}
+
+	.product__name,
+	.product__price-actual {
+		padding-block: 0.8rem;
+	}
 }
