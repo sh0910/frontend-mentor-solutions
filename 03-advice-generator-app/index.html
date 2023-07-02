@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Frontend Mentor | Advice generator app</title>
+		<script defer src="script.js"></script>
+	</head>
+	<body>
+		<main>
+			<div class="advice-container">
+				<div class="advice__number">Advice #117</div>
+				<div class="advice__quote">
+					"It is easy to sit up and take notice, what's difficult is getting up
+					and taking action."
+				</div>
+				<picture>
+					<source
+						srcset="/images/pattern-divider-desktop.svg"
+						media="(min-width: 600px)"
+					/>
+					<img
+						class="divider"
+						src="/images/pattern-divider-mobile.svg"
+						alt="pattern divider"
+					/>
+				</picture>
+				<button class="btn" data-icon="icon-dice" alt="dice icon"></button>
+			</div>
+		</main>
+	</body>
+</html>
