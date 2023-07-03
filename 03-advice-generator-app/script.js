@@ -3,10 +3,20 @@
 const btn = document.querySelector('.btn');
 const adviceContainer = document.querySelector('.advice');
 
-const getAdvice = async function () {
+const getAndRenderAdvice = async function () {
 	try {
 		renderSpinner(adviceContainer);
 
+		const { advice, id } = await getAdvice();
+
+		renderAdvice(adviceContainer, id, advice);
+	} catch (err) {
+		console.error(`💥 ${err.message}`);
+	}
+};
+
+const getAdvice = async function () {
+	try {
 		const res = await fetch('https://api.adviceslip.com/advice');
 
 		if (!res.ok) {
@@ -15,20 +25,15 @@ const getAdvice = async function () {
 
 		const data = await res.json();
 		const { advice, id } = data.slip;
-
-		renderAdvice(adviceContainer, id, advice);
+		return { advice, id };
 	} catch (err) {
 		renderError(adviceContainer, err);
-		console.error(`💥 ${err.message}`);
+		throw err;
 	}
 };
 
-(async function () {
-	await getAdvice();
-});
-
-window.addEventListener('load', getAdvice);
-btn.addEventListener('click', getAdvice);
+window.addEventListener('load', getAndRenderAdvice);
+btn.addEventListener('click', getAndRenderAdvice);
 
 function clear(el) {
 	el.innerHTML = '';
