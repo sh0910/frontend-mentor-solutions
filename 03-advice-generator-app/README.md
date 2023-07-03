@@ -28,7 +28,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Desktop
+![](./screenshot-desktop.png)
+
+Mobile
+![](./screenshot-mobile.png)
 
 ### Links
 
@@ -41,9 +45,13 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- CSS grid
 - Mobile-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+In this project I learned how to use the fetch API, async/await, and DOM manipulation.
+
+### Credits
+
+loader - [Pure CSS Loader](https://loading.io/css/)
