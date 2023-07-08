@@ -20,9 +20,9 @@ Users should be able to:
 
 ### My Screenshots
 
-![](screenshot-desktop-1.png)
-
 ![](screenshot-desktop-2.png)
+
+![](screenshot-desktop-1.png)
 
 ## My process
 
