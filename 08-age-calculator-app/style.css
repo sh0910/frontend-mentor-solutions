@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+  --color-purple: hsl(259, 100%, 65%);
+  --color-red: hsl(0, 100%, 67%);
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-1: hsl(0, 0%, 94%);
+  --color-grey-2: hsl(0, 0%, 86%);
+  --color-grey-3: hsl(0, 1%, 44%);
+  --color-black: hsl(0, 0%, 8%);
+
+  --fz-inputs: 32px;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-bold-extra: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-grey-2);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background-color: var(--color-white);
+  padding: 54px 56px;
+  width: 840px;
+  border-radius: 25px;
+  border-bottom-right-radius: 200px;
+  display: grid;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(4, 22%);
+  gap: 32px;
+}
+
+form input {
+  display: block;
+}
+
+label {
+  color: var(--color-grey-3);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+}
+
+input {
+  display: block;
+  margin-top: 12px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  outline: 1px solid var(--color-grey-2);
+  font-size: var(--fz-inputs);
+  font-weight: var(--fw-bold);
+  padding: 14px 24px;
+}
+
+input::placeholder {
+  font-weight: inherit;
+}
+
+input:focus {
+  outline: 1px solid var(--color-purple);
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control.error label {
+  color: var(--color-red);
+}
+
+.form-control.error input {
+  outline: 1px solid var(--color-red);
+}
+
+small {
+  color: var(--color-red);
+  font-size: 12px;
+  font-weight: var(--fw-regular);
+  font-style: italic;
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small.error-message {
+  visibility: visible;
+}
+
+.submit {
+  background-color: transparent;
+  border: none;
+  display: grid;
+  grid-template-columns: auto 100px;
+  align-items: center;
+  grid-column: 1 / 5;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: var(--color-purple);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--color-black);
+}
+
+.icon {
+  display: inline-block;
+  width: 46px;
+  height: 44px;
+}
+
+.result {
+  font-size: 98px;
+  font-weight: var(--fw-bold-extra);
+  font-style: italic;
+  line-height: 1.15;
+}
+
+span {
+  color: var(--color-purple);
+}
+
+@media (max-width: 1140px) {
+  .calculator {
+    margin-inline: 50px;
+  }
+}
+
+@media (max-width: 950px) {
+  .calculator {
+    padding: 48px 24px;
+    width: 345px;
+    gap: 32px;
+  }
+
+  form {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  input {
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 12px 8px 12px 12px;
+  }
+
+  small {
+    font-size: 8px;
+    bottom: -14px;
+  }
+
+  .submit {
+    display: block;
+    padding-block: 32px;
+    position: relative;
+  }
+
+  .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon {
+    width: 23px;
+    height: 22px;
+  }
+
+  .result {
+    font-size: 48px;
+  }
+}
