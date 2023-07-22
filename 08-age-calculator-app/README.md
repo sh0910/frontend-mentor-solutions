@@ -19,6 +19,11 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 - **Bonus**: See the age numbers animate to their final number when the form is submitted
 
+### Links
+
+- Solution URL: [HERE](https://sh0910.github.io/frontend-mentor-solutions/08-age-calculator-app/)
+- Live Site URL: [HERE](https://github.com/sh0910/frontend-mentor-solutions/tree/main/08-age-calculator-app)
+
 ### Screenshot
 
 Desktop
@@ -29,11 +34,6 @@ Desktop
 
 Mobile
 ![](./solutions/mobile-design.png)
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -50,11 +50,6 @@ Mobile
 
 - JS form validation
 - CSS Grid
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
