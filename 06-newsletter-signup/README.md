@@ -20,8 +20,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [HERE](https://sh0910.github.io/frontend-mentor-solutions/06-newsletter-signup/)
-- Live Site URL: [HERE](https://github.com/sh0910/frontend-mentor-solutions/tree/main/06-newsletter-signup)
+- Live Site URL: [HERE](https://sh0910.github.io/frontend-mentor-solutions/06-newsletter-signup/)
+- Solution URL: [HERE](https://github.com/sh0910/frontend-mentor-solutions/tree/main/06-newsletter-signup)
 
 ### Screenshots
 
