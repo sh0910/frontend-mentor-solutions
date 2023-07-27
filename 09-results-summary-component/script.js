@@ -13,10 +13,36 @@ const getData = async () => {
 
 const renderData = async () => {
   try {
+    const avgContainer = document.querySelector('[data-avg]');
+    const summariesContainer = document.querySelector('.summaries');
     const data = await getData();
-    data.map(el => console.log(el));
+
+    const avgScore = Math.floor(
+      data.map(el => el.score).reduce((a, b) => a + b) / data.length
+    );
+
+    const markup = data
+      .map(
+        el => `
+      <div class="summary">
+        <div>
+          <img
+            src="${el.icon}"
+            alt="${el.category.toLowerCase()} icon"
+          />
+          <span>${el.category}</span>
+        </div>
+        <p class="score">
+          <span class="individual-score">${el.score}</span> / 100
+        </p>
+      </div>`
+      )
+      .join('');
+
+    avgContainer.textContent = avgScore;
+    summariesContainer.insertAdjacentHTML('beforeend', markup);
   } catch (err) {
-    `${err.message} 💩`;
+    console.error(err.message);
   }
 };
 

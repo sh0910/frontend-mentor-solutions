@@ -14,17 +14,6 @@
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Results summary component</title>
     <script src="script.js" defer></script>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
@@ -32,7 +21,7 @@
         <div class="result-container">
           <h1>Your Result</h1>
           <div class="result-circle">
-            <p class="result-rating">76</p>
+            <p class="result-rating" data-avg></p>
             <p class="result-text">of 100</p>
           </div>
           <p class="result-score">Great</p>
@@ -42,61 +31,18 @@
         </div>
         <div class="summary-container">
           <h2>Summary</h2>
-          <div class="summaries">
-            <div class="summary">
-              <div>
-                <img
-                  src="./assets/images/icon-reaction.svg"
-                  alt="reaction icon"
-                />
-                <span>Reaction</span>
-              </div>
-              <p class="score">
-                <span class="individual-score">80</span> / 100
-              </p>
-            </div>
-
-            <div class="summary">
-              <div>
-                <img src="./assets/images/icon-memory.svg" alt="memory icon" />
-                <span>Memory</span>
-              </div>
-              <p class="score">
-                <span class="individual-score">92</span> / 100
-              </p>
-            </div>
-
-            <div class="summary">
-              <div>
-                <img src="./assets/images/icon-verbal.svg" alt="verbal icon" />
-                <span>Verbal</span>
-              </div>
-              <p class="score">
-                <span class="individual-score">61</span> / 100
-              </p>
-            </div>
-
-            <div class="summary">
-              <div>
-                <img src="./assets/images/icon-visual.svg" alt="visual icon" />
-                <span>Visual</span>
-              </div>
-              <p class="score">
-                <span class="individual-score">72</span> / 100
-              </p>
-            </div>
-          </div>
+          <div class="summaries"></div>
 
           <a href="#" class="btn">Continue</a>
         </div>
       </div>
     </main>
 
-    <!-- <div class="attribution">
+    <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+      >. Coded by <a href="github.com/sh0910">sh0910</a>.
+    </div>
   </body>
 </html>

@@ -22,16 +22,18 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [HERE](https://github.com/sh0910/frontend-mentor-solutions/tree/main/07-results-summary-component)
+- Live Site URL: [HERE](https://sh0910.github.io/frontend-mentor-solutions/07-results-summary-component)
 
 ### Screenshot
 
-![Desktop screenshot](./screenshot.jpg)
-![Mobile screenshot](./screenshot.jpg)
+![Desktop screenshot](./screenshot-desktop.png)
+![Mobile screenshot](./screenshot-mobile.jpg)
 
 ### Built with
 
+- ES6 Array Methods
+- Async/Await
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox

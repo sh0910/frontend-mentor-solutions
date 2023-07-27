@@ -35,8 +35,6 @@
 }
 
 body {
-  /* background-image: url('./design/desktop-design.jpg'); */
-
   color: var(--color-blue-light-2);
   font-family: 'Hanken Grotesk', sans-serif;
   font-size: var(--fz-paragraph);
@@ -230,4 +228,20 @@ h2 {
   .btn {
     align-self: center;
   }
+}
+
+.attribution {
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #333;
+  background-color: #e3e0e0;
+  text-align: center;
+  padding: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 26%, 59%);
 }
