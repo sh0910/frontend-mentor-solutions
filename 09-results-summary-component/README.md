@@ -22,13 +22,14 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [HERE](https://github.com/sh0910/frontend-mentor-solutions/tree/main/07-results-summary-component)
-- Live Site URL: [HERE](https://sh0910.github.io/frontend-mentor-solutions/07-results-summary-component)
+- Solution URL: [HERE](https://github.com/sh0910/frontend-mentor-solutions/tree/main/09-results-summary-component)
+- Live Site URL: [HERE](https://sh0910.github.io/frontend-mentor-solutions/09-results-summary-component)
 
-### Screenshot
+### Screenshots
 
 ![Desktop screenshot](./screenshot-desktop.png)
-![Mobile screenshot](./screenshot-mobile.jpg)
+
+![Mobile screenshot](./screenshot-mobile.png)
 
 ### Built with
 
