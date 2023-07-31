@@ -1,0 +1,13 @@
+{
+  "name": "07-time-tracking-dashboard",
+  "version": "1.0.0",
+  "description": "Solution to Frontend Mentor's time tracking dashboard",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "author": "Shani Huang",
+  "devDependencies": {
+    "sass": "^1.64.1"
+  }
+}

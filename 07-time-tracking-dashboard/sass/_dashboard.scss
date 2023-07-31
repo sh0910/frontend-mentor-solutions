@@ -1,0 +1,190 @@
+.dashboard {
+  width: 77vw;
+  max-width: 1110px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.75rem;
+}
+
+.profile {
+  display: grid;
+  grid-row: 1/3;
+
+  background-color: $color-blue-2;
+
+  border-radius: $br;
+
+  &__info {
+    background-color: $color-0;
+    padding: 2rem;
+    padding-bottom: 0;
+    border-radius: $br;
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    outline: 3px solid #fff;
+    margin-bottom: 2.875rem;
+  }
+
+  &__name {
+    color: #fff;
+    font-weight: 300;
+    font-size: 2.5rem;
+  }
+
+  &__periods {
+    display: grid;
+    justify-items: start;
+    align-items: start;
+
+    padding: 2rem 0 2rem 2rem;
+  }
+}
+
+// Array of different colors
+$card-colors: $color-1, $color-2, $color-3, $color-4, $color-5, $color-6;
+
+// Loop through colors
+@for $i from 1 through length($card-colors) {
+  .card:nth-child(#{$i + 1}) {
+    background: linear-gradient(nth($card-colors, $i) 0%, $color-blue-1 100%);
+  }
+}
+
+.card {
+  height: 245px;
+  border-radius: $br;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-rows: 2.75rem 1fr;
+
+  &__img {
+    justify-self: end;
+    transform: translate(-20px, -10px);
+  }
+
+  &__content {
+    display: grid;
+    align-items: start;
+
+    background-color: $color-blue-2;
+    border-radius: $br;
+    padding: 2rem;
+    z-index: 10;
+
+    &:hover {
+      background-color: #33355c;
+    }
+  }
+
+  &__btn {
+    justify-self: end;
+    padding-top: 6px;
+    display: grid;
+
+    svg {
+      transition: all 0.2s;
+
+      &:hover {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: $fw-bold;
+  }
+
+  &__current-stats {
+    grid-column: 1/3;
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: $fw-light;
+    align-self: end;
+  }
+
+  &__previous-stats {
+    grid-column: 1/3;
+    align-self: center;
+  }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1150px) {
+  .profile {
+    grid-row: 1/4;
+    align-content: start;
+
+    &__info {
+      padding-bottom: 2rem;
+    }
+
+    &__periods {
+      gap: 1rem;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile {
+    grid-row: 1/3;
+  }
+}
+
+@media (max-width: 560px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .profile {
+    grid-row: 1/2;
+
+    &__text {
+      display: grid;
+      align-content: center;
+    }
+
+    &__info {
+      margin-bottom: 0;
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      gap: 1rem;
+    }
+
+    &__img {
+      margin-bottom: 0;
+      width: 60px;
+      height: 60px;
+    }
+
+    &__name {
+      font-size: 1.5rem;
+    }
+
+    &__periods {
+      padding-bottom: 2rem;
+      padding-left: 0;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .dashboard {
+    width: 100%;
+    grid-template-columns: 100vw;
+  }
+}
