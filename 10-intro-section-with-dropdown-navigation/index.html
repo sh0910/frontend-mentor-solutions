@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="./images/logo.svg" alt="snap logo" class="navbar__logo" />
+      <a href="#" class="toggle-btn">
+        <span class="toggle-btn__bar"></span>
+        <span class="toggle-btn__bar"></span>
+        <span class="toggle-btn__bar"></span>
+      </a>
+
+      <div class="navbar__links">
+        <button class="navbar__link">Features</button>
+        <button class="navbar__link">Company</button>
+        <a href="#" class="navbar__link">Careers</a>
+        <a href="#" class="navbar__link">About</a>
+        <button>Login</button>
+        <button>Register</button>
+      </div>
+    </nav>
+    <!-- ------------------------------ -->
+
+    <!-- Features Company Careers About Login Register Make remote work Get your team
+    in sync, no matter your location. Streamline processes, create team rituals,
+    and watch productivity soar. Learn more -->
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+    <script>
+      // Responsive navbar
+      const toggleBtn = document.querySelector('.toggle-btn');
+      const navbarLinks = document.querySelector('.navbar__links');
+
+      toggleBtn.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>
