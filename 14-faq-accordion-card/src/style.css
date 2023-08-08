@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --color-orange: hsl(14, 88%, 65%);
+  --color-purple: hsl(273, 75%, 66%);
+  --color-purple-dark: hsl(240, 73%, 65%);
+  --color-white: hsl(240, 5%, 91%); /* divider*/
+  --color-grey-1: hsl(240, 6%, 50%);
+  --color-grey-2: hsl(237, 12%, 33%);
+  --color-grey-3: hsl(238, 29%, 16%);
+  --bg-gradient: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-gradient);
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+
+  height: 100vh;
+
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 25px;
+
+  width: 920px;
+  height: 508px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  margin-left: 40px;
+}
+
+.bg-img {
+  background: url("../public/images/illustration-woman-online-desktop.svg"),
+    url("../public/images/bg-pattern-desktop.svg");
+
+  background-repeat: no-repeat;
+  background-position: top 70px right 70px;
+}
+
+.box-img {
+  position: absolute;
+  top: 200px;
+  left: -93px;
+  background: url("../public/images/illustration-box-desktop.svg");
+  width: 191px;
+  height: 184px;
+}
+
+.container-right {
+  padding: 62px;
+  padding-right: 100px;
+  padding-left: 16px;
+}
+
+.accordion {
+  display: grid;
+}
+
+.accordion-item {
+  padding-block: 19px;
+  border-bottom: 1px solid var(--color-grey-1);
+}
+
+.accordion-item .open {
+  font-weight: 700;
+}
+
+.accordion-item div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question {
+  font-size: 14px;
+}
+
+.question .open {
+  font-weight: 700;
+}
+
+.answer {
+  color: var(--color-grey-1);
+  margin-top: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    margin-left: 80px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+    width: 330px;
+    height: 535px;
+  }
+
+  .bg-img {
+    background: url("../public/images/illustration-woman-online-mobile.svg"),
+      url("../public/images/bg-pattern-mobile.svg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 200px;
+  }
+
+  .box-img {
+    display: none;
+  }
+}
