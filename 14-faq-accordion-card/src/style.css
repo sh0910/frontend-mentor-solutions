@@ -37,6 +37,7 @@ h1 {
 .container {
   background-color: #fff;
   border-radius: 25px;
+  box-shadow: 0px 25px 28px 0px rgba(0, 0, 0, 0.2);
 
   width: 920px;
   height: 508px;
@@ -109,11 +110,21 @@ h1 {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1076px) {
+  body {
+    align-items: start;
+    margin-top: 150px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
   .container {
     grid-template-columns: 1fr;
     width: 330px;
     height: 535px;
+    background-color: transparent;
   }
 
   .bg-img {
@@ -124,9 +135,20 @@ h1 {
     background-position: center;
 
     height: 200px;
+    width: 330px;
+
+    position: absolute;
+    top: -120px;
   }
 
   .box-img {
     display: none;
+  }
+
+  .container-right {
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 24px;
+    padding-top: 130px;
   }
 }
