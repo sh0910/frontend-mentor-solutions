@@ -7,6 +7,7 @@ export default function App() {
     <main>
       <Logo />
       <Calculator />
+      <Footer />
     </main>
   );
 }
@@ -22,20 +23,24 @@ function Logo() {
 function Calculator() {
   const [billAmount, setBillAmount] = useState("");
   const [tipAmount, setTipAmount] = useState("");
+  const [customTipAmount, setCustomTipAmount] = useState("");
   const [numPeople, setNumPeople] = useState("");
 
+  const finalTipAmount = tipAmount || customTipAmount;
+
   const totalTipPerPerson =
-    billAmount > 0 && tipAmount && numPeople > 0
-      ? Number((billAmount / numPeople) * (tipAmount / 100)).toFixed(2)
+    billAmount > 0 && finalTipAmount && numPeople > 0
+      ? Number((billAmount / numPeople) * (finalTipAmount / 100)).toFixed(2)
       : "";
 
   const totalBillPerPerson = totalTipPerPerson
-    ? Number(billAmount / numPeople + tipAmount).toFixed(2)
+    ? Number(billAmount / numPeople + +totalTipPerPerson).toFixed(2)
     : "";
 
   function reset() {
     setBillAmount("");
     setTipAmount("");
+    setCustomTipAmount("");
     setNumPeople("");
   }
 
@@ -44,10 +49,11 @@ function Calculator() {
       <ContainerLeft
         billAmount={billAmount}
         setBillAmount={setBillAmount}
-        tipAmount={tipAmount}
         setTipAmount={setTipAmount}
         numPeople={numPeople}
         setNumPeople={setNumPeople}
+        customTipAmount={customTipAmount}
+        setCustomTipAmount={setCustomTipAmount}
       />
       <ContainerRight
         totalTipPerPerson={totalTipPerPerson}
@@ -61,15 +67,17 @@ function Calculator() {
 function ContainerLeft({
   billAmount,
   setBillAmount,
-  tipAmount,
   setTipAmount,
+  customTipAmount,
+  setCustomTipAmount,
   numPeople,
   setNumPeople,
 }) {
   const tipOptions = [5, 10, 15, 20, 25];
 
   const [billInputError, setBillInputError] = useState(false);
-  const [numPeopleInputError, setNumPeopleInputError] = useState(false); // // testing. switch back to false
+  const [numPeopleInputError, setNumPeopleInputError] = useState(false);
+  const [activeButton, setActiveButton] = useState(null);
 
   function handleBillInput(e) {
     setBillAmount(e.target.value);
@@ -77,6 +85,18 @@ function ContainerLeft({
     if (e.target.value <= 0) return setBillInputError(true);
 
     setBillInputError(false);
+  }
+
+  function handleButtonClick(tip) {
+    setTipAmount(tip);
+    setCustomTipAmount("");
+    setActiveButton(tip);
+  }
+
+  function handleCustomTipAmount(e) {
+    setCustomTipAmount(e.target.value);
+    setTipAmount("");
+    setActiveButton(null); // reset active btn state
   }
 
   function handleNumPeopleInput(e) {
@@ -109,18 +129,19 @@ function ContainerLeft({
       <label>Selet Tip % </label>
       <div className="tip-options">
         {tipOptions.map((tip) => (
-          <button key={tip} onClick={() => setTipAmount(tip)}>
+          <button
+            key={tip}
+            className={`button ${activeButton === tip ? "active" : ""}`}
+            onClick={() => handleButtonClick(tip)}
+          >
             {tip}%
           </button>
         ))}
-        {/* // todo: if user clicks on tip %, custom amount is still 0.*/}
         <input
           type="number"
-          placeholder={tipAmount > 0 ? tipAmount : "Custom"}
-          onChange={(e) => {
-            (e.target.value === "" || e.target.value > 0) &&
-              setTipAmount(e.target.value);
-          }}
+          placeholder="Custom"
+          value={customTipAmount}
+          onChange={(e) => handleCustomTipAmount(e)}
         />
       </div>
 
@@ -168,5 +189,21 @@ function ContainerRight({ totalTipPerPerson, totalBillPerPerson, reset }) {
         reset
       </button>
     </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer class="attribution">
+      Challenge by{" "}
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Frontend Mentor
+      </a>
+      . Coded by <a href="github.com/sh0910">sh0910</a>.
+    </footer>
   );
 }
